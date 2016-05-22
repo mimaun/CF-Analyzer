@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
+import os
 from PySide.QtGui import *
 from PySide.QtCore import *
 
@@ -40,8 +41,7 @@ class TopWindowWidget(QWidget):
     def __init__(self, parent=None):
         super(TopWindowWidget, self).__init__(parent)
 
-        self.layout = QVBoxLayout()
-
+        self.layout = QVBoxLayout() 
         self.branch_button_widget = BranchButtonBoxWidget()
 
         # test
@@ -57,10 +57,6 @@ class TopWindowWidget(QWidget):
         self.layout.addWidget(self.branch_button_widget)
 
         self.setLayout(self.layout) 
-
-class PauseAnalyzerWindowWidget():
-    def __init__(self, parent=None):
-        super(PauseAnalyzerWindowWidget, self).__init__(parent)
 
 # def clearAllWidgets():
 #     for i in reversed(range(layout.count())):
